@@ -1,0 +1,12 @@
+main {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    bottom: 10px;
+    border-radius: 20px;
+    background: grey;
+}
