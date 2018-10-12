@@ -44,8 +44,10 @@ body {
     margin-top: 10px;
 }
 .input-field {
+    display: block;
     height: 20px;
     width: 280px;
+    max-width: 100%;
     padding: 5px;
     margin: 10px;
     border: 1px solid #c0c0c0;
