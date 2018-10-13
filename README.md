@@ -8,3 +8,5 @@ Survey Page
 Product Landing Page
 
 Technical Documentation Page
+
+Personal Portfolio Page
