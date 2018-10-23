@@ -10,3 +10,5 @@ Product Landing Page
 Technical Documentation Page
 
 Personal Portfolio Page
+
+JavaScript Projects
