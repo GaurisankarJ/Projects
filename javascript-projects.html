@@ -6,11 +6,33 @@
     </head>
     <body>
         <script>
-        
+            function palindromeChecker(str) {
+                return str.replace(/[\W_]/g, "").toLowerCase() === str.replace(/[\W_]/g, "").toLowerCase().split("").reverse().join("");
+            };
+            console.log(palindromeChecker("A man, a plan, a canal. Panama"));//Output = true
+            function romanConverter(num) {
+                var roman = [
+                    ["I", "V"],
+                    ["X", "L"],
+                    ["C", "D"],
+                    ["M"]
+                ];
+                var num = num.toString().split("").reverse().map((num, index) => parseInt(num));
+                var romanNumeral = "";
+                for(var i=0; i<num.length; i++) {
+                    romanNumeral = roman[i][0].repeat(num[i]) + romanNumeral;
+                    if(roman[i][1]) {
+                        romanNumeral = romanNumeral.replace(roman[i][0].repeat(5), roman[i][1]).replace(roman[i][1] + roman[i][0].repeat(4), roman[i][0] + roman[i+1][0]).replace(roman[i][0].repeat(4), roman[i][0] + roman[i][1]);
+                    }
+                }  
+                return romanNumeral;          
+            };
+            console.log(romanConverter(549));//Output = DXLIX
         </script>
         <header>
             <ul>
                 <li><h2>Palindrome Checker</h2></li>
+                <li><h2>Roman Numeral Converter</h2></li>
             </ul>
         </header>
         <footer>
