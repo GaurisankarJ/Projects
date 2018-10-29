@@ -1,14 +1,12 @@
 # Projects
-HTML CSS Projects
+Tribute Page
 
-  Tribute Page
+Survey Page
 
-  Survey Page
+Product Landing Page
 
-  Product Landing Page
+Technical Documentation Page
 
-  Technical Documentation Page
-
-  Personal Portfolio Page
+Personal Portfolio Page
 
 JavaScript Project
