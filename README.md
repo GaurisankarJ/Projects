@@ -1,6 +1,4 @@
 # Projects
-HTML CSS Projects
-
 Tribute Page
 
 Survey Page
@@ -11,4 +9,4 @@ Technical Documentation Page
 
 Personal Portfolio Page
 
-JavaScript Projects
+JavaScript Project
