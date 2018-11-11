@@ -10,3 +10,9 @@ Technical Documentation Page
 Personal Portfolio Page
 
 JavaScript Project
+
+Random Quote Generator
+
+Markdown Previewer
+
+Drum Machine
