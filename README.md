@@ -20,3 +20,6 @@
 >JavaScript Calculator
 
 >Pomodoro Clock
+
+>D3 Bar Chart
+
