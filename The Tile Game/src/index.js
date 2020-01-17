@@ -329,10 +329,11 @@
 //     document.getElementById("app")
 // );
 
-const { Component } = React;
-const { render } = ReactDOM;
-const { Motion, spring } = ReactMotion;
-const { range } = _;
+
+import React from "react";
+import ReactDOM from "react-dom";
+import { Motion, spring } from "react-motion";
+import { range } from "lodash";
 
 const tilesStyle = {
   listStyle: "none",
@@ -428,7 +429,7 @@ function swap(numbers, src, dest) {
   return numbers;
 }
 
-class Tile extends Component {
+class Tile extends React.Component {
   constructor() {
     super();
 
@@ -473,7 +474,7 @@ class Tile extends Component {
   }
 }
 
-class Tiles extends Component {
+class Tiles extends React.Component {
   constructor(props) {
     super(props);
 
@@ -544,10 +545,16 @@ class Tiles extends Component {
   }
 }
 
-class Puzzle extends Component {
-  render() {
-    return <Tiles rows={3} cols={3} hole={8} width={300} height={300} />;
-  }
+class Puzzle extends React.Component {
+    render() {
+        return (
+          <div id="home">
+            <div id="playground">
+              <Tiles rows={3} cols={3} hole={8} width={300} height={300} />;
+            </div>
+          </div>
+        );
+    }
 }
 
-render(<Puzzle />, document.getElementById("app"));
+ReactDOM.render(<Puzzle />, document.getElementById("app"));
