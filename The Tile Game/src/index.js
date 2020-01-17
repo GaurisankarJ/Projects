@@ -479,7 +479,9 @@ class Tiles extends React.Component {
     super(props);
 
     const { rows, cols } = props;
-    this.state = { numbers: _.range(0, rows * cols) };
+      this.state = {
+          numbers: _.range(0, rows * cols),
+      };
 
     this.handleTileClick = this.handleTileClick.bind(this);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -537,7 +539,7 @@ class Tiles extends React.Component {
             />
           ))}
         </ul>
-        <button style={buttonStyle} onClick={this.handleButtonClick}>
+            <button style={buttonStyle} onClick={this.handleButtonClick}>
           {solved ? "Start" : "Restart"}
         </button>
       </div>
@@ -546,15 +548,39 @@ class Tiles extends React.Component {
 }
 
 class Puzzle extends React.Component {
-    render() {
-        return (
-          <div id="home">
-            <div id="playground">
-              <Tiles rows={3} cols={3} hole={8} width={300} height={300} />;
-            </div>
-          </div>
-        );
-    }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        rows: 3,
+        cols: 3
+    };
+
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+
+  handleButtonClick(rows, cols) {
+    this.setState({ rows, cols });
+  }
+
+  render() {
+    return (
+      <div id="home">
+        <div id="playground">
+          <Tiles rows={3} cols={3} hole={8} width={300} height={300} />;
+        </div>
+      </div>
+    );
+  }
 }
 
 ReactDOM.render(<Puzzle />, document.getElementById("app"));
+// <button style={buttonStyle} onClick={() => this.handleButtonClick(3, 3)}>
+//             Easy
+//           </button>
+//           <button style={buttonStyle} onClick={() => this.handleButtonClick(4, 4)}>
+//             Medium
+//           </button>
+//           <button style={buttonStyle} onClick={() => this.handleButtonClick(5, 5)}>
+//             Hard
+//           </button>
